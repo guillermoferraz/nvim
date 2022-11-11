@@ -55,6 +55,10 @@ call plug#begin('~/.vim/plugged')
  
  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+ " Nvim Finder
+
+ Plug 'RishabhRD/popfix'
+ Plug 'RishabhRD/nvim-finder'
 
  call plug#end()
 
@@ -78,6 +82,7 @@ set smartcase " ... unless they contain at latest one capital letter
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeWinPos = "right"
+let NERDTreeMapOpenInTab='<TAB>'
 
 " Golang Settings
 
@@ -197,6 +202,10 @@ map <Space>nt :NERDTreeFind<CR>
 map <Space>f :Files<CR>
 map <Space>hf :Ag<CR>
 
+" Search words
+
+map <Space>s :Rg<CR>
+
 " tmux navigator
 nnoremap <silent> <Space><C-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <Space><C-k> :TmuxNavigateRight><cr>
@@ -224,7 +233,7 @@ map <Space>H :sp<cr>
 map <Space>V :vsplit<cr>
 
 "open terminal
-set splitright
+set splitbelow
 function! OpenTerminal()
    " move to right most buffer
    execute "normal \<C-l>"
