@@ -291,6 +291,19 @@ function! OpenTerminal()
 endfunction
 nnoremap <C-X> :call OpenTerminal()<CR>
 
+" Function to terminal in bottom
+function! OpenTerminalGit()
+   " move to right most buffer
+   execute "sp"
+   execute "call OpenTerminal()"
+   execute "normal \<C-l>"
+   execute "q"
+endfunction
+
+map <Space>th :call OpenTerminalGit()<CR>
+
+
+
  let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-json',
