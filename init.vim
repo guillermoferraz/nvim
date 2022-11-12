@@ -60,6 +60,11 @@ call plug#begin('~/.vim/plugged')
  Plug 'RishabhRD/popfix'
  Plug 'RishabhRD/nvim-finder'
 
+ " Git lens
+
+ Plug 'APZelos/blamer.nvim'
+
+
  call plug#end()
 
 set number
@@ -93,6 +98,21 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+
+" Git lens settings
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
+let g:blamer_show_in_visual_modes = 0
+let g:blamer_show_in_insert_modes = 0
+let g:blamer_prefix = ' > '
+let g:blamer_template = '<committer> <summary>'
+let g:blamer_date_format = '%d/%m/%y'
+let g:blamer_relative_time = 1
+highlight Blamer guifg=lightgrey
+
+
+
 
 
   let g:tagbar_type_go = {
@@ -222,6 +242,9 @@ nnoremap <C-Up> 10<C-y>
 
 nnoremap <C-LeftMouse> <LeftMouse>:GoImplements<CR>
 
+" Tabs finder
+
+map <Space>T :W<CR>
 
 "******************
 "custom shortcuts
@@ -257,7 +280,7 @@ function! OpenTerminal()
      " toggle insert on enter/exit
      silent au BufLeave <buffer> stopinsert!
      silent au BufWinEnter, WinEnter <buffer> startinsert!
-
+ 
      " set maps inside terminal buffer
      execute "tnoremap <buffer> <C-h> <C-\\><C-n><C-w><C-h>"
      execute "tnoremap <buffer> <C-X> <C-\\><C-n>:q<CR>"
