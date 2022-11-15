@@ -235,6 +235,7 @@ nnoremap <silent> <Space><C-j> :TmuxNavigateDown><cr>
 " Tabs navigator
 map <Space>tp :tabprevious<cr>
 map <Space>tn :tabnext<cr>
+map <Space>t :tabnew<cr>
 
 " fast scrolling
 nnoremap <C-Down> 10<C-e>
@@ -331,4 +332,6 @@ map <Space>th :call OpenTerminalGit()<CR>
   let g:ale_fix_on_save = 1
   let g:ale_linters_explicit = 1
 
-"" we will add keybinds below this comment.
+  " Autocompletion
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  let g:deoplete#enable_at_startup = 1
