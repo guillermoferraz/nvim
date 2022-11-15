@@ -105,7 +105,7 @@ let g:blamer_enabled = 1
 let g:blamer_delay = 500
 let g:blamer_show_in_visual_modes = 0
 let g:blamer_show_in_insert_modes = 0
-let g:blamer_prefix = ' > '
+let g:blamer_prefix = 'Commit --> '
 let g:blamer_template = '<committer> <summary>'
 let g:blamer_date_format = '%d/%m/%y'
 let g:blamer_relative_time = 1
@@ -198,10 +198,10 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr >
 nmap <leader>do <Plug>(coc-codeaction)
 nmap <leader>rn <Plug>(coc-rename)
-
+nmap <Space>l  <Plug>(coc-format-selected)
 
 " map key
 nnoremap <F3> :NERDTreeToggle<CR>
