@@ -64,8 +64,8 @@ call plug#begin('~/.vim/plugged')
 
  Plug 'APZelos/blamer.nvim'
 
-
  call plug#end()
+
 
 set number
 set mouse=a
@@ -76,7 +76,7 @@ set ruler
 set cursorline
 set encoding=utf8
 set showmatch
-set relativenumber
+"set relativenumber
 
 "" Searching
 set hlsearch " higlight matches
