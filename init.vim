@@ -40,7 +40,8 @@ call plug#begin('~/.vim/plugged')
 
  " Eslint
  Plug 'w0rp/ale'
- Plug 'roxma/nvim-completion-manager'
+ " Plug 'roxma/nvim-completion-manager'
+ Plug 'ncm2/ncm2'
  Plug 'SirVer/ultisnips'
  Plug 'honza/vim-snippets'
  
