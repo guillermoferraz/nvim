@@ -71,3 +71,9 @@ keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 keymap.set("n", "<leader>w", "<cmd>w<CR>")
 keymap.set("n", "<leader>q", "<cmd>q<CR>")
+
+-- Markdown Preview
+keymap.set("n", "MD", "<cmd>MarkdownPreview<CR>")
+keymap.set("n", "MQ", "<cmd>MarkdownStop<CR>")
+keymap.set("n", "MT", "<cmd>MarkdownPreviewToggle<CR>")
+
