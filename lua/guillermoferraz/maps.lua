@@ -18,7 +18,7 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
 -- New tab
-keymap.set('n', 'te', ':tabedit')
+keymap.set('n', 'tn', "<cmd>tabnew<CR>")
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
@@ -69,3 +69,5 @@ keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+keymap.set("n", "<leader>w", "<cmd>w<CR>")
+keymap.set("n", "<leader>q", "<cmd>q<CR>")

@@ -98,17 +98,25 @@ packer.startup(function(use)
 
   -- theme
   use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
+    'folke/tokyonight.nvim',
+    as = 'tokyonight.nvim',
     config = function()
-      vim.cmd('colorscheme rose-pine')
+      vim.cmd('colorscheme tokyonight.nvim')
     end
   })
+  use ('folke/tokyonight.nvim')
 
   -- the primeagen
   use('theprimeagen/harpoon')
 
   -- redo tree
   use('mbbill/undotree')
+
+  -- Color Picker
+  use ({"ziontee113/color-picker.nvim",
+    config = function()
+        require("color-picker")
+    end,
+  })
 
 end)
