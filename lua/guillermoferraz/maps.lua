@@ -77,3 +77,5 @@ keymap.set("n", "MD", "<cmd>MarkdownPreview<CR>")
 keymap.set("n", "MQ", "<cmd>MarkdownStop<CR>")
 keymap.set("n", "MT", "<cmd>MarkdownPreviewToggle<CR>")
 
+-- Show history
+keymap.set("", "hh", "<cmd>history<CR>")
